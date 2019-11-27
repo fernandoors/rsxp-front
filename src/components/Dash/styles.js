@@ -69,7 +69,8 @@ export const Cursos = styled.div`
     }
 
     img {
-      width: 100px;
+      width: 30%;
+      height: 30%;
       border-radius: 10px;
     }
     h1 {

@@ -18,9 +18,12 @@ export const Container = styled.div`
 export const Aluno = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   h1 {
     font-size: 18px;
     color: blue;
+    margin: 0;
+    margin-bottom: 20px;
     span {
       font-size: 20px;
       color: #666;
@@ -29,6 +32,8 @@ export const Aluno = styled.div`
   h2 {
     font-size: 18px;
     color: blue;
+    margin: 0;
+    margin-bottom: 20px;
     span {
       font-size: 20px;
       color: orange;

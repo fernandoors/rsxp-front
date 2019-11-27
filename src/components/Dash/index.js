@@ -2,15 +2,17 @@ import React from "react";
 import { Container, Aluno, Cursos, Empresas } from "./styles";
 import { cursos, empresas } from "./mock";
 
-export default function Dash() {
+export default function Dash({ location }) {
   return (
     <Container>
       <Aluno>
         <h1>
-          Bem vindo, aluno <span>Fulano</span> !!
+          Bem vindo, aluno <span>{location.state.name}</span>!
         </h1>
         <h2>
-          Você está na trilha <span>Frontend</span>
+          Você está na trilha <span>
+            {location.state.back > location.state.front ? 'Backend' : 'Frontend'}
+          </span>
         </h2>
       </Aluno>
       <h1>Caminhos</h1>

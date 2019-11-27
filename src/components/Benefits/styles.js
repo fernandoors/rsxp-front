@@ -9,10 +9,10 @@ export const Container = styled.div`
 `
 const outBox = keyframes`
   from {
-    opacity: 0
+    background: black;
   }
   to {
-    opacity: 1;
+    background: white;
   }
 `
 export const Box = styled.div`
@@ -28,16 +28,7 @@ export const Box = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
-  label {
-    display: none;
-  }
-  
-  &:hover{
-    transition: all 1s;
-    animation: ${outBox} 2000ms;
-    label {
-      display: block;
-    }
-  }
+  transition: all ease 0.5s;
+  animation: ${outBox} 2000ms;
 `;
 

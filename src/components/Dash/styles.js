@@ -41,16 +41,19 @@ export const Cursos = styled.div`
   border-radius: 6px;
   padding 20px;
   margin-bottom: 20px;
+  height: 180px;
 
   div {
     display: flex;
     flex-direction: row;
-    width: 300px;
+    width: 155px;
+    height: 154px;
+    margin-right: 145px;
 
     div {
       display: flex;
       flex-direction: column;
-      padding: 10px;
+      padding-left: 10px;
       font-size: 14px;
 
       div {
@@ -60,7 +63,7 @@ export const Cursos = styled.div`
         label {
           border: 1px solid #aaa;
           border-radius: 4px;
-          margin: 4px 0px;
+          margin: 4px -10px;
           padding: 4px;
           width: fit-content;
           background: #eee;
@@ -69,9 +72,12 @@ export const Cursos = styled.div`
     }
 
     img {
-      width: 30%;
-      height: 30%;
-      border-radius: 10px;
+      width: 100%;
+      height: 180px;
+      object-fit: contain;
+      object-position: top;
+      border-right: 1px solid #bbb;
+      padding-right: 10px;
     }
     h1 {
       font-size: 20px;
@@ -96,4 +102,39 @@ export const Empresas = styled.div`
   border: 1px solid blue;
   border-radius: 6px;
   padding 20px;
+  margin-bottom: 20px;
+  background: #eee;
+
+  div {
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+      font-size: 14px;
+
+      div {
+        display: flex;
+        flex-direction: row;
+
+        label {
+          border: 1px solid #aaa;
+          border-radius: 4px;
+          margin: 4px 6px 0 0;
+          padding: 4px;
+          width: fit-content;
+          background: #fff;
+        }
+      }
+    }
+
+    h1 {
+      font-size: 20px;
+      margin: 0 0 5px 0;
+      padding: 0;
+    }
+  }
 `;

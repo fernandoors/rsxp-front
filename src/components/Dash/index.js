@@ -36,7 +36,17 @@ export default function Dash() {
       <h1>Destinos</h1>
       <Empresas>
         {empresas.map(empresas => (
-          <h1 key={empresas.nome}>{empresas.nome}</h1>
+          <div key={empresas.nome}>
+            <div>
+              <h1>{empresas.nome}</h1>
+              Requisitos:
+              <div>
+                {empresas.requisitos.map(item => (
+                  <label key={item}>{item}</label>
+                ))}
+              </div>
+            </div>
+          </div>
         ))}
       </Empresas>
     </Container>

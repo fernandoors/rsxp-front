@@ -9,14 +9,14 @@ export const cursos = [
   },
   {
     nome: "Wevo",
-    id: 1,
+    id: 2,
     linguagem: "Javascript",
     tags: ["Node", "React", "React Native"],
     img: "https://www.wevo.com.br/wp-content/uploads/2019/07/logo.png"
   },
   {
     nome: "LinkApi",
-    id: 1,
+    id: 3,
     linguagem: "Javascript",
     tags: ["Node", "React", "React Native"],
     img:
@@ -24,7 +24,7 @@ export const cursos = [
   },
   {
     nome: "Totalvoice",
-    id: 1,
+    id: 4,
     linguagem: "Javascript",
     tags: ["Node", "React", "React Native"],
     img:
@@ -36,6 +36,21 @@ export const empresas = [
   {
     nome: "Rocketseat",
     id: 1,
+    requisitos: ["Node", "React", "Scrum"]
+  },
+  {
+    nome: "Wevo",
+    id: 2,
+    requisitos: ["Node", "React", "Scrum"]
+  },
+  {
+    nome: "LinkApi",
+    id: 3,
+    requisitos: ["Node", "React", "Scrum"]
+  },
+  {
+    nome: "Totalvoice",
+    id: 4,
     requisitos: ["Node", "React", "Scrum"]
   }
 ];

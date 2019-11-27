@@ -9,10 +9,10 @@ export const Container = styled.div`
 `
 const outBox = keyframes`
   from {
-    background: black;
+    background: ${colors.white};
   }
   to {
-    background: white;
+    background: ${colors.black};
   }
 `
 export const Box = styled.div`

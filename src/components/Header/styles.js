@@ -25,7 +25,8 @@ export const Logo = styled.div`
     }
   }
   label {
-    font-size: 38px
+    font-size: 38px;
+    cursor: pointer;
   }
 `
 export const Links = styled.div`

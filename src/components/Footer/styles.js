@@ -4,14 +4,15 @@ import { colors } from "../../assets/references";
 export const Foot = styled.footer`
   position: fixed;
   bottom: 0;
-  width: 100vw;
+  width: 100%;
   height: 30px;
-  background: ${colors.blue};
-  color: ${colors.white};
+  border-top: 1px solid;
+  color: ${colors.black};
+  background: ${colors.white};
   display: flex;
   justify-content: center;
   a, a:active {
-    color: ${colors.white};
+    color: ${colors.black};
     font-size: 18px;
     align-self: center;
   }

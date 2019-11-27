@@ -1,34 +1,36 @@
-import React from 'react';
-import { useSelector, useDispatch } from 'react-redux'
-import Dispatches from '../../store/dispatches';
-import { Container, Flex } from './styles';
-import Card from '../Card';
-import { FaNodeJs, FaPython } from 'react-icons/fa'
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom'
+import { Container, Flex, Button, Welcome, Title } from './styles';
+import Summary from '../Summary';
+import Content from '../Content';
+import Benefits from '../Benefits';
 
 function App() {
-  const container = useSelector(state => state)
-  const dispath = useDispatch()
-
-  function addContainer() {
-    dispath(Dispatches.addContainer({ container: 'react', port: 8080, network: 'front' }))
+  const [view, setView] = useState('Quem são?')
+  function handleSetView(data) {
+    return setView(data)
   }
+
   return (
     <Container>
-      {container.map(item => <div key={item.container}>
-        <p>{item.container}</p>
-        <p>{item.port}</p>
-        <p>{item.network}</p>
-      </div>)}
-      <button onClick={addContainer}>Novo</button>
+      <Welcome>
+        <h2>Bem vindo ao BBO!</h2>
+        <p>Abrimos a caixa preta do mundo da programação para você. Entenda e se encante com o desenvolvimento de software!</p>
+      </Welcome>
+      <Benefits />
+      <Title>{view}</Title>
+      <Summary view={view} handleSetView={handleSetView} />
+
+      {view === 'Quem são?' && <Content type='how'/>}
+      {view === 'O que precisa?' && <Content type='what' />}
+      {view === 'O que ganha?' && <Content type='howMuch' />}
+
       <Flex>
-        <Card
-          icon={<FaNodeJs />}
-          url="assets/templates/node.txt"
-        />
-        <Card
-          icon={<FaPython />}
-          url="assets/templates/python.txt"
-        />
+        <Link to='/profile'>
+          <Button>
+            Analisar Perfil
+          </Button>
+        </Link>
       </Flex>
     </Container>
   );

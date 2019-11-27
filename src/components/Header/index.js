@@ -1,20 +1,19 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import { Head, Img, Links } from './styles'
-import logo from '../../assets/img/logo.png'
+import { Link, withRouter } from 'react-router-dom'
+import { Head, Img, Logo } from './styles'
+import logo from '../../assets/img/logo.jpg'
 
 function Header() {
   return (
     <Head>
-      <Link to='/'>
-        <Img src={logo} alt='logo' />
-      </Link>
-      <Links>
-        <Link to="/">Home</Link>
-        <Link to="/Dash">Dash</Link>
-      </Links>
+      <Logo>
+        <Link to='/'>
+          <Img src={logo} alt='logo' />
+          <label>Black Box Open</label>
+        </Link>
+      </Logo>
     </Head>
   )
 }
 
-export default Header
+export default withRouter(Header)

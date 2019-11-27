@@ -15,7 +15,7 @@ export default function Dash({ location }) {
           </span>
         </h2>
       </Aluno>
-      <h1>Caminhos</h1>
+      <h1>Trilhas que te levam a sua formação...</h1>
       <Cursos>
         {cursos.map(cursos => (
           <div key={cursos.nome}>
@@ -26,16 +26,16 @@ export default function Dash({ location }) {
                 Linguagem: <span>{cursos.linguagem}</span>
               </p>
               Tags:
-              <div>
-                {cursos.tags.map(item => (
-                  <label key={item}>{item}</label>
-                ))}
-              </div>
+              {cursos.tags.map(item => (
+                <label key={item} class={item}>
+                  {item}
+                </label>
+              ))}
             </div>
           </div>
         ))}
       </Cursos>
-      <h1>Destinos</h1>
+      <h1>...chegada da Trilha, e esses caras aí vão te contratar!!</h1>
       <Empresas>
         {empresas.map(empresas => (
           <div key={empresas.nome}>
@@ -44,7 +44,9 @@ export default function Dash({ location }) {
               Requisitos:
               <div>
                 {empresas.requisitos.map(item => (
-                  <label key={item}>{item}</label>
+                  <label key={item} class={item}>
+                    {item}
+                  </label>
                 ))}
               </div>
             </div>

@@ -8,14 +8,11 @@ export const Container = styled.div`
   justify-content: center;
 `
 const outBox = keyframes`
-  0% {
-    background: rgba(2,2,2,0.1);
+  from {
+    opacity: 0
   }
-  50% {
-    background: rgba(100,100,100,0.1);
-  }
-  100% {
-    background: ${colors.white};
+  to {
+    opacity: 1;
   }
 `
 export const Box = styled.div`
@@ -37,7 +34,7 @@ export const Box = styled.div`
   
   &:hover{
     transition: all 1s;
-    animation: ${outBox} 5000ms;
+    animation: ${outBox} 2000ms;
     label {
       display: block;
     }

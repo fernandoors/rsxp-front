@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const GlobalContainer = styled.div`
   -webkit-font-smoothing: antialiased;
@@ -7,5 +7,9 @@ export const GlobalContainer = styled.div`
   width: 100vw;
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', 'Source Sans Pro', 'Open Sans', sans-serif;
-`
+  font-family: "Roboto", "Source Sans Pro", "Open Sans", sans-serif;
+
+  body {
+    -webkit-font-smoothing: antialiased !important;
+  }
+`;

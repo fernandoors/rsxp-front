@@ -27,7 +27,7 @@ export default function Dash({ location }) {
               </p>
               Tags:
               {cursos.tags.map(item => (
-                <label key={item} class={item}>
+                <label key={item} className={item}>
                   {item}
                 </label>
               ))}
@@ -44,7 +44,7 @@ export default function Dash({ location }) {
               Requisitos:
               <div>
                 {empresas.requisitos.map(item => (
-                  <label key={item} class={item}>
+                  <label key={item} className={item}>
                     {item}
                   </label>
                 ))}

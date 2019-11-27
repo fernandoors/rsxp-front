@@ -8,7 +8,7 @@ export default function Footer() {
       <label>
       <FaRegCopyright />
       </label>
-      <a href='https://github.com/fernandoors/get-docker' target='/' >
+      <a href='https://github.com/fernandoors/rsxp-front' target='/' >
         <FaGithub />
       </a>
     </Foot>
